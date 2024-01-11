@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195_software2.controller.ContactsViewController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="88.0" layoutY="84.0" spacing="12.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="logout_button" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            <Label fx:id="user_timezone_label" text="Timezone:" />
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <children>
+                  <Label text="Contacts">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="open_appointments_view_button" mnemonicParsing="false" onAction="#openAppointmentsView" text="Open Appointments View" />
+                  <Button fx:id="open_customers_view_button" mnemonicParsing="false" onAction="#openCustomersView" text="Open Customers View" />
+               </children>
+            </HBox>
+            <TableView fx:id="contacts_table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="contact_ID_col" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="contact_name_col" prefWidth="291.0" text="Name" />
+                  <TableColumn fx:id="contact_email_col" prefWidth="383.0" text="Email" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <children>
+                  <Label text="Contact Schedule &amp; Reports">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="view_contact_schedule_button" mnemonicParsing="false" onAction="#getContactSchedule" text="View Schedule" />
+               </children>
+            </HBox>
+            <Label fx:id="selected_contact_label" text="Select a Contact from Above and click &quot;View Schedule&quot;" />
+            <TableView fx:id="contact_schedule_table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                  <TableColumn fx:id="appt_ID_col" prefWidth="75.0" text="Appt ID" />
+                  <TableColumn fx:id="appt_title_col" prefWidth="75.0" text="Title" />
+                  <TableColumn fx:id="appt_description_col" prefWidth="133.0" text="Description" />
+                  <TableColumn fx:id="appt_type_col" minWidth="0.0" prefWidth="85.0" text="Type" />
+                  <TableColumn fx:id="appt_location_col" prefWidth="121.0" text="Location" />
+                  <TableColumn fx:id="appt_start_col" prefWidth="51.0" text="Start" />
+                  <TableColumn fx:id="appt_end_col" prefWidth="62.0" text="End" />
+                  <TableColumn fx:id="appt_custID_col" prefWidth="73.0" text="Cust ID" />
+                  <TableColumn fx:id="appt_userID_col" prefWidth="79.0" text="User ID" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
