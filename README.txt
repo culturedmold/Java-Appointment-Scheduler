@@ -1,12 +1,9 @@
-WGU C195 - Software II
-Cory Hampton (Tyler)
-Student ID: 010739720
+Java Appointment Scheduling Desktop Application with MySQL Database
+
 IDE: Intellij IDEA 2022.2.2 (EDU)
 JDK: OpenJDK 21.0.1
 MySQL Connector: 8.2.0
 JavaFX: 17.0.2
-
-To run the project, click the "Run" button (green triangle) from MainApplication.java. Enter credentials (test / test) and login.
 
 
 Reports can be accessed from various parts of the application:
